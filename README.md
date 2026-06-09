@@ -21,3 +21,10 @@ Create a custom reference protein database derived from microbiome sequencing da
 - Functional annotation using eggNOG-mapper
 - Removal of proteins lacking functional annotation
 - Changing fasta headers
+
+## Planned additions:
+
+![Status](https://img.shields.io/badge/Status-Under%20Construction-orange)
+- [ ] Proteomics data preprocessing
+- [ ] Exploratory analysis and visualization
+- [ ] Statistical and functional analysis
