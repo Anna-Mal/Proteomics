@@ -1,0 +1,28 @@
+#modifiationc in genome_utils.py to run condiga:
+#originally installed from source - lines 104-113
+
+
+                            present = datetime.now()
+
+                            old_diff = present - datetime(
+                                int(taxid_dates[taxid][0]),
+                                int(taxid_dates[taxid][1]),
+                                int(taxid_dates[taxid][2]),
+                            )
+                            new_diff = present - datetime(
+                                int(rel_date[0]), int(rel_date[1]), int(rel_date[2])
+                            )
+
+
+#corrected
+
+			present = datetime.now()
+
+                            old_diff = present - datetime(
+                                datetime.strptime(taxid_dates[taxid][0], '%Y-%m-%d').year,
+                                datetime.strptime(taxid_dates[taxid][0], '%Y-%m-%d').month,
+                                datetime.strptime(taxid_dates[taxid][0], '%Y-%m-%d').day,
+                            )
+                            new_diff = present - datetime(
+                                int(datetime.strptime(rel_date[0], '%Y-%m-%d').year), int(datetime.strptime(rel_date[0], '%Y-%m-%d').month), int(datetime.strptime(rel_date[0], '%Y-%m-%d').day)
+                            )
